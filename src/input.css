@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@source "../index.html";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --color-ink: #1e1e24;
+  --color-panel: #15101f;
+  --color-line: #2a2238;
+  --color-brand: #4a2c8c;
+  --color-brand-light: #6d46c9;
+  --color-mint: #17b88a;
+  --color-mint-dark: #0f8f6a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0b0b12;
+  background-image:
+    radial-gradient(60rem 40rem at 85% -10%, rgba(74, 44, 140, 0.45), transparent),
+    radial-gradient(50rem 35rem at -10% 30%, rgba(23, 184, 138, 0.12), transparent);
+  background-attachment: fixed;
+}
+
+@layer components {
+  .chip {
+    @apply inline-flex items-center rounded-lg bg-white/10 px-3.5 py-2 text-sm text-slate-200;
+  }
+  .nav-link {
+    @apply rounded-lg px-3.5 py-2 text-sm text-slate-300 transition hover:text-white;
+  }
+  .section-title {
+    @apply text-2xl font-semibold text-white;
+  }
+  .card {
+    @apply rounded-xl border border-line bg-panel/60 p-5;
+  }
+}
+@source "./index.html";
