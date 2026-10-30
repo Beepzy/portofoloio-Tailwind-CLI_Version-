@@ -10,6 +10,19 @@
   --color-brand-light: #6d46c9;
   --color-mint: #17b88a;
   --color-mint-dark: #0f8f6a;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-fade-up: fade-up 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+@keyframes float { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-14px) } }
+@keyframes fade-up { from { opacity: 0; transform: translateY(26px) } to { opacity: 1; transform: none } }
+
+html { scroll-behavior: smooth; }
+.js .reveal { opacity: 0; }
+.reveal.is-visible { animation: fade-up 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) var(--d, 0ms) both; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .reveal { opacity: 1; }
+  .reveal.is-visible, .animate-fade-up, .animate-float { animation: none; }
 }
 
 html {
@@ -38,4 +51,3 @@ body {
     @apply rounded-xl border border-line bg-panel/60 p-5;
   }
 }
-@source "./index.html";
