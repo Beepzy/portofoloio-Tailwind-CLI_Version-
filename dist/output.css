@@ -51,6 +51,7 @@
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --font-display: "Fraunces", Georgia, serif;
     --color-ink: #1e1e24;
     --color-panel: #15101f;
     --color-line: #2a2238;
@@ -65,7 +66,6 @@
     --color-card-bg: #1e1633;
     --color-card-line: #322752;
     --color-card-mute: #aaa1c4;
-    --font-display: "Fraunces", Georgia, serif;
   }
 }
 @layer base {
@@ -620,6 +620,10 @@
     font-size: var(--text-4xl);
     line-height: var(--tw-leading, var(--text-4xl--line-height));
   }
+  .text-5xl {
+    font-size: var(--text-5xl);
+    line-height: var(--tw-leading, var(--text-5xl--line-height));
+  }
   .text-7xl {
     font-size: var(--text-7xl);
     line-height: var(--tw-leading, var(--text-7xl--line-height));
@@ -833,6 +837,9 @@
     }
   }
   @media (width >= 40rem) {
+    .sm\:mt-3\.5 {
+      margin-top: calc(var(--spacing) * 3.5);
+    }
     .sm\:block {
       display: block;
     }
@@ -851,9 +858,6 @@
     }
   }
   @media (width >= 48rem) {
-    .md\:col-span-2 {
-      grid-column: span 2 / span 2;
-    }
     .md\:flex {
       display: flex;
     }
