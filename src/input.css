@@ -12,6 +12,15 @@
   --color-mint-dark: #0f8f6a;
   --animate-float: float 6s ease-in-out infinite;
   --animate-fade-up: fade-up 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  --color-brand-violet: #a78bfa;
+  --color-brand-green: #4ade9f;
+  --color-card-bg: #1e1633;
+  --color-card-line: #322752;
+  --color-card-mute: #aaa1c4;
+  --radius-4xl: 2rem;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-display: "Fraunces", Georgia, serif;
+  --animate-float: float 6s ease-in-out infinite;
 }
 @keyframes float { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-14px) } }
 @keyframes fade-up { from { opacity: 0; transform: translateY(26px) } to { opacity: 1; transform: none } }
@@ -50,4 +59,10 @@ body {
   .card {
     @apply rounded-xl border border-line bg-panel/60 p-5;
   }
+}
+@utility text-gradient {
+  background-image: linear-gradient(120deg, var(--color-brand-violet), var(--color-brand-green));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
